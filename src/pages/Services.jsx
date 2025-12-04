@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { HiCheck, HiArrowRight } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
-import ThemeToggle from '../components/ThemeToggle';
 import {
     FaPaintBrush,
     FaLaptopCode,
@@ -11,7 +10,6 @@ import {
     FaTag
 } from 'react-icons/fa';
 import './Services.css';
-import './services-dark-mode.css';
 
 const Services = () => {
     const services = [
@@ -26,7 +24,7 @@ const Services = () => {
                 'Design System Creation',
                 'Usability Testing'
             ],
-            color: 'hsl(260, 85%, 65%)'
+            color: 'var(--color-primary)'
         },
         // {
         //     icon: <FaLaptopCode />,
@@ -39,7 +37,7 @@ const Services = () => {
         //         'Web Applications',
         //         'Figma to Code'
         //     ],
-        //     color: 'hsl(320, 85%, 65%)'
+        //     color: 'var(--color-primary)'
         // },
         {
             icon: <FaPalette />,
@@ -52,7 +50,7 @@ const Services = () => {
                 'Vector Files',
                 'Social Media Kit'
             ],
-            color: 'hsl(180, 85%, 60%)'
+            color: 'var(--color-primary)'
         },
         {
             icon: <FaInstagram />,
@@ -65,7 +63,7 @@ const Services = () => {
                 'LinkedIn Banners',
                 'Content Calendar Design'
             ],
-            color: 'hsl(40, 85%, 60%)'
+            color: 'var(--color-primary)'
         },
         {
             icon: <FaFileAlt />,
@@ -78,7 +76,7 @@ const Services = () => {
                 'Custom Templates',
                 'Infographics'
             ],
-            color: 'hsl(140, 85%, 60%)'
+            color: 'var(--color-primary)'
         },
         {
             icon: <FaTag />,
@@ -91,7 +89,7 @@ const Services = () => {
                 'Multiple Sizes',
                 'Brand Consistency'
             ],
-            color: 'hsl(200, 85%, 60%)'
+            color: 'var(--color-primary)'
         }
     ];
 

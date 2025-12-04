@@ -10,10 +10,11 @@
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.199);
-    backdrop-filter: blur(60px);
-    box-shadow: var(--shadow-md);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
     padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .navbar-content {
@@ -23,15 +24,23 @@
 }
 
 .logo {
-    font-size: 3rem;
-    font-weight: 800;
+    font-size: 2rem;
+    font-weight: 700;
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
-    transition: transform var(--transition-base);
+    color: #F9FFF2;
+    /* White/Cream for visibility on teal hero */
+    letter-spacing: 0.05em;
+    transition: transform var(--transition-base), color var(--transition-base);
+}
+
+.navbar.scrolled .logo {
+    color: var(--color-primary);
+    /* Dark when scrolled */
 }
 
 .logo:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
+    opacity: 0.9;
 }
 
 .nav-links {
@@ -46,18 +55,31 @@
 }
 
 .nav-links a {
-    font-weight: 500;
+    font-family: var(--font-heading);
+    font-weight: 400;
     font-size: 1rem;
     position: relative;
     padding: var(--space-xs) 0;
     transition: color var(--transition-base);
+    color: #F9FFF2;
+    /* White/Cream for visibility on teal hero */
+    letter-spacing: 0.05em;
+}
+
+.navbar.scrolled .nav-links a {
+    color: var(--color-text);
+    /* Dark when scrolled */
 }
 
 .nav-links a:hover {
-    color: var(--color-primary-light);
+    opacity: 0.7;
 }
 
 .nav-links a.active {
+    color: #F9FFF2;
+}
+
+.navbar.scrolled .nav-links a.active {
     color: var(--color-primary);
 }
 
@@ -66,14 +88,21 @@
     bottom: -4px;
     left: 0;
     right: 0;
-    height: 2px;
-    background: var(--gradient-primary);
-    border-radius: 2px;
+    height: 1px;
+    background: #F9FFF2;
+}
+
+.navbar.scrolled .active-indicator {
+    background: var(--color-primary);
 }
 
 .cta-btn {
+    font-family: var(--font-heading);
     font-size: 0.9rem;
     padding: var(--space-sm) var(--space-lg);
+    border: 1px solid var(--color-primary);
+    border-radius: 0;
+    /* Sharp corners for Victorian feel */
 }
 
 .desktop-only {
@@ -84,14 +113,20 @@
     display: none;
     background: none;
     border: none;
-    color: var(--color-text);
+    color: #F9FFF2;
+    /* White/Cream for visibility */
     cursor: pointer;
     padding: var(--space-xs);
     transition: color var(--transition-base);
 }
 
+.navbar.scrolled .mobile-menu-btn {
+    color: var(--color-text);
+    /* Dark when scrolled */
+}
+
 .mobile-menu-btn:hover {
-    color: var(--color-primary);
+    opacity: 0.7;
 }
 
 .mobile-menu {
@@ -111,10 +146,12 @@
 .mobile-nav-links a {
     display: block;
     padding: var(--space-sm);
-    font-weight: 500;
+    font-family: var(--font-heading);
+    font-weight: 400;
     font-size: 1.1rem;
     transition: all var(--transition-base);
     border-radius: var(--radius-sm);
+    color: var(--color-text);
 }
 
 .mobile-nav-links a:hover,

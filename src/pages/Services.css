@@ -1,27 +1,16 @@
 .services-page {
     padding-top: 80px;
+    background-color: var(--color-bg);
 }
 
 /* Hero */
 .services-hero {
     padding: var(--space-3xl) 0;
     text-align: center;
-    background: var(--color-bg-elevated);
+    background-image: url('../assets/images/paper-texture.png');
+    background-size: cover;
     position: relative;
-    overflow: hidden;
-}
-
-.services-hero::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -20%;
-    width: 600px;
-    height: 600px;
-    background: var(--gradient-primary);
-    border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.2;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .services-hero-content {
@@ -32,18 +21,25 @@
 }
 
 .services-hero h1 {
+    font-family: var(--font-display);
+    font-size: 4rem;
     margin-bottom: var(--space-lg);
+    color: var(--color-text);
 }
 
 .services-hero p {
+    font-family: var(--font-heading);
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
+    font-style: italic;
+    color: var(--color-text-muted);
 }
 
 /* Services Detail Grid */
 .services-detail-section {
     background: var(--color-bg);
+    padding: var(--space-3xl) 0;
 }
 
 .services-detail-grid {
@@ -55,37 +51,49 @@
 .service-detail-card {
     background: var(--color-bg-card);
     padding: var(--space-2xl);
-    border-radius: var(--radius-lg);
     border: 1px solid var(--color-border);
+    position: relative;
     transition: all var(--transition-base);
 }
 
+.service-detail-card::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 1px solid var(--color-border-light);
+    pointer-events: none;
+}
+
 .service-detail-card:hover {
-    border-color: var(--color-primary);
-    box-shadow: var(--shadow-lg);
+    border-color: var(--color-accent);
     transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
 }
 
 .service-detail-icon {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--radius-md);
     font-size: 2.5rem;
-    color: white;
+    color: var(--color-accent);
     margin-bottom: var(--space-lg);
+    text-align: center;
 }
 
 .service-detail-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
     margin-bottom: var(--space-sm);
     color: var(--color-text);
+    text-align: center;
 }
 
 .service-description {
     margin-bottom: var(--space-lg);
     font-size: 1rem;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-style: italic;
 }
 
 .service-features {
@@ -93,25 +101,30 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
+    margin-top: var(--space-lg);
+    border-top: 1px solid var(--color-border-light);
+    padding-top: var(--space-lg);
 }
 
 .service-features li {
     display: flex;
     align-items: center;
     gap: var(--space-sm);
-    color: var(--color-text-muted);
+    color: var(--color-text);
     font-size: 0.95rem;
+    font-family: var(--font-body);
 }
 
 .check-icon {
-    color: var(--color-primary);
-    font-size: 1.2rem;
+    color: var(--color-accent);
+    font-size: 1rem;
     flex-shrink: 0;
 }
 
 /* Pricing Section */
 .pricing-section {
     background: var(--color-bg-elevated);
+    padding: var(--space-3xl) 0;
 }
 
 .pricing-grid {
@@ -124,7 +137,6 @@
 .pricing-card {
     background: var(--color-bg-card);
     padding: var(--space-2xl);
-    border-radius: var(--radius-lg);
     border: 1px solid var(--color-border);
     position: relative;
     transition: all var(--transition-base);
@@ -132,15 +144,26 @@
     flex-direction: column;
 }
 
+.pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border: 1px solid var(--color-border-light);
+    pointer-events: none;
+}
+
 .pricing-card:hover {
-    border-color: var(--color-primary);
+    border-color: var(--color-accent);
     box-shadow: var(--shadow-lg);
 }
 
 .pricing-card.popular {
-    border-color: var(--color-primary);
-    box-shadow: var(--shadow-glow);
+    border-color: var(--color-accent);
     transform: scale(1.05);
+    z-index: 1;
 }
 
 .popular-badge {
@@ -148,44 +171,49 @@
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--gradient-primary);
+    background: var(--color-accent);
     color: white;
     padding: var(--space-xs) var(--space-lg);
-    border-radius: 50px;
     font-size: 0.85rem;
-    font-weight: 700;
+    font-family: var(--font-heading);
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    z-index: 2;
 }
 
 .pricing-card h3 {
-    font-size: 1.5rem;
+    font-family: var(--font-display);
+    font-size: 2rem;
     margin-bottom: var(--space-md);
     color: var(--color-text);
+    text-align: center;
 }
 
 .price {
     margin-bottom: var(--space-lg);
+    text-align: center;
+    border-bottom: 1px solid var(--color-border-light);
+    padding-bottom: var(--space-lg);
 }
 
 .price-amount {
     font-size: 3rem;
-    font-weight: 800;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-family: var(--font-heading);
+    color: var(--color-accent);
 }
 
 .price-period {
     font-size: 1rem;
     color: var(--color-text-muted);
+    font-style: italic;
 }
 
 .pricing-description {
     margin-bottom: var(--space-xl);
     font-size: 0.95rem;
     min-height: 40px;
+    text-align: center;
+    font-style: italic;
 }
 
 .pricing-features {
@@ -201,7 +229,7 @@
     display: flex;
     align-items: flex-start;
     gap: var(--space-sm);
-    color: var(--color-text-muted);
+    color: var(--color-text);
     font-size: 0.95rem;
 }
 
@@ -213,29 +241,30 @@
 .pricing-note {
     text-align: center;
     padding: var(--space-xl);
-    background: rgba(160, 90, 255, 0.05);
-    border: 1px solid rgba(160, 90, 255, 0.2);
-    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-card);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .pricing-note p {
     margin: 0;
     font-size: 1rem;
-    color: var(--color-text);
+    color: var(--color-text-muted);
+    font-style: italic;
 }
 
 /* Services CTA */
 .services-cta-section {
-    background: var(--color-bg);
-}
-
-.services-cta-content {
+    background-image: url('../assets/images/paper-texture.png');
+    background-size: cover;
+    padding: var(--space-3xl) 0;
     text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
 }
 
 .services-cta-content h2 {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
     margin-bottom: var(--space-md);
 }
 
@@ -256,9 +285,5 @@
 
     .pricing-card.popular {
         transform: scale(1);
-    }
-
-    .price-amount {
-        font-size: 2.5rem;
     }
 }

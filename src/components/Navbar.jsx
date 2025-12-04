@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
-import ThemeToggle from './ThemeToggle';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -61,10 +60,6 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="desktop-only">
-            <ThemeToggle />
-          </div>
-
           {/* Mobile Menu Button */}
           <button
             className="mobile-menu-btn"
@@ -102,14 +97,6 @@ const Navbar = () => {
                     </Link>
                   </motion.li>
                 ))}
-                <motion.li
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                  style={{ display: 'flex', alignItems: 'center' }}
-                >
-                  <ThemeToggle />
-                </motion.li>
               </ul>
             </motion.div>
           )}
