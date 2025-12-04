@@ -88,7 +88,7 @@ const About = () => {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
-                                <h3>{item.skill}</h3>
+                                <h3 className="dark-text-dark">{item.skill}</h3>
                                 <p className="dark-text-dark">{item.description}</p>
                             </motion.div>
                         ))}
@@ -138,7 +138,7 @@ const About = () => {
                         >
                             <div className="timeline-dot"></div>
                             <div className="timeline-content">
-                                <h3>2024-2025</h3>
+                                <h3><span className="num">2024-2025</span></h3>
                                 <h4>Graphic Designer</h4>
                                 <h5>OzKleen Asia Pacific Pty Ltd</h5>
                                 <p className="dark-text-dark">
@@ -156,7 +156,7 @@ const About = () => {
                         >
                             <div className="timeline-dot"></div>
                             <div className="timeline-content">
-                                <h3>2023-2024</h3>
+                                <h3><span className="num">2023-2024</span></h3>
                                 <h4>Graphic Design Student</h4>
                                 <h5>TAFE Queensland</h5>
                                 <p className="dark-text-dark">

@@ -71,6 +71,80 @@ const Home = () => {
 
     return (
         <div className="home">
+            {/* Animated Cloud Background */}
+            <motion.div
+                style={{
+                    position: 'fixed',
+                    width: '800px',
+                    height: '800px',
+                    borderRadius: '50%',
+                    filter: 'blur(120px)',
+                    opacity: 0.15,
+                    zIndex: -1,
+                    background: 'radial-gradient(circle, hsl(35, 80%, 65%), hsl(25, 75%, 55%))',
+                    top: '-200px',
+                    left: '-200px',
+                }}
+                animate={{
+                    x: [0, 100, -50, 0],
+                    y: [0, 50, 100, 0],
+                    scale: [1, 1.1, 0.95, 1],
+                }}
+                transition={{
+                    duration: 20,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                }}
+            />
+            <motion.div
+                style={{
+                    position: 'fixed',
+                    width: '800px',
+                    height: '800px',
+                    borderRadius: '50%',
+                    filter: 'blur(120px)',
+                    opacity: 0.15,
+                    zIndex: -1,
+                    background: 'radial-gradient(circle, hsl(15, 70%, 60%), hsl(35, 80%, 55%))',
+                    bottom: '-300px',
+                    right: '-300px',
+                }}
+                animate={{
+                    x: [0, -80, 60, 0],
+                    y: [0, -60, -100, 0],
+                    scale: [1, 1.05, 0.9, 1],
+                }}
+                transition={{
+                    duration: 25,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                }}
+            />
+            <motion.div
+                style={{
+                    position: 'fixed',
+                    width: '600px',
+                    height: '600px',
+                    borderRadius: '50%',
+                    filter: 'blur(100px)',
+                    opacity: 0.12,
+                    zIndex: -1,
+                    background: 'radial-gradient(circle, hsl(25, 70%, 60%), transparent)',
+                    top: '20%',
+                    right: '10%',
+                }}
+                animate={{
+                    x: [0, -120, 0],
+                    y: [0, 80, 0],
+                    scale: [1, 1.15, 1],
+                }}
+                transition={{
+                    duration: 18,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                }}
+            />
+
             {/* Hero Section with Parallax */}
             <section className="hero">
                 <motion.div
@@ -136,7 +210,7 @@ const Home = () => {
                     >
                         {stats.map((stat, index) => (
                             <div key={index} className="stat-item">
-                                <h3>{stat.number}</h3>
+                                <h4>{stat.number}</h4>
                                 <p>{stat.label}</p>
                             </div>
                         ))}
