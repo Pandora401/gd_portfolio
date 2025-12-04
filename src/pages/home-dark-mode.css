@@ -1,0 +1,9 @@
+/* Light mode - darker icons */
+.service-icon {
+    filter: brightness(0.7);
+}
+
+/* Dark mode - restore normal brightness */
+body.dark-mode .service-icon {
+    filter: brightness(1);
+}

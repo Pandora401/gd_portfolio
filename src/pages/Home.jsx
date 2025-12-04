@@ -11,6 +11,7 @@ import {
 } from 'react-icons/fa';
 import profileImage from '../assets/images/pfp.jpeg';
 import './Home.css';
+import './home-dark-mode.css';
 
 const Home = () => {
     const { scrollY } = useScroll();

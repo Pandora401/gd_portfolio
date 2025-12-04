@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { HiCheck, HiArrowRight } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
+import ThemeToggle from '../components/ThemeToggle';
 import {
     FaPaintBrush,
     FaLaptopCode,
@@ -10,6 +11,7 @@ import {
     FaTag
 } from 'react-icons/fa';
 import './Services.css';
+import './services-dark-mode.css';
 
 const Services = () => {
     const services = [
@@ -241,12 +243,9 @@ const Services = () => {
                                     ))}
                                 </ul>
 
-                                <Link
-                                    to="/contact"
-                                    className={`btn ${plan.popular ? 'btn-primary' : 'btn-outline'} btn-full`}
-                                >
-                                    Get Started <HiArrowRight />
-                                </Link>
+                                <div style={{ display: 'flex', justifyContent: 'center', marginTop: 'var(--space-lg)' }}>
+                                    <ThemeToggle />
+                                </div>
                             </motion.div>
                         ))}
                     </div>

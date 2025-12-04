@@ -61,9 +61,9 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <Link to="/contact" className="btn btn-primary cta-btn desktop-only">
-            Get Started
-          </Link>
+          <div className="desktop-only">
+            <ThemeToggle />
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -106,22 +106,15 @@ const Navbar = () => {
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.2 }}
+                  style={{ display: 'flex', alignItems: 'center' }}
                 >
-                  <Link
-                    to="/contact"
-                    className="btn btn-primary"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Get Started
-                  </Link>
+                  <ThemeToggle />
                 </motion.li>
               </ul>
             </motion.div>
           )}
         </AnimatePresence>
       </motion.nav>
-
-      <ThemeToggle />
     </>
   );
 };
