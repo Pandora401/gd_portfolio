@@ -1,0 +1,273 @@
+.portfolio-page {
+    padding-top: 80px;
+}
+
+/* Hero */
+.portfolio-hero {
+    padding: var(--space-3xl) 0;
+    text-align: center;
+    background: var(--color-bg-elevated);
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.2;
+}
+
+.portfolio-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.portfolio-hero h1 {
+    margin-bottom: var(--space-lg);
+}
+
+.portfolio-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Portfolio Content */
+.portfolio-content {
+    background: var(--color-bg);
+}
+
+/* Filters */
+.portfolio-filters {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: var(--space-3xl);
+}
+
+.filter-btn {
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.filter-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.filter-btn.active {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: white;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--space-xl);
+}
+
+.portfolio-item {
+    cursor: pointer;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-base);
+}
+
+.portfolio-item:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+}
+
+.portfolio-item-image {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-item-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--space-xl);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.portfolio-item:hover .portfolio-item-overlay {
+    opacity: 1;
+}
+
+.portfolio-item-overlay h3 {
+    color: white;
+    margin-bottom: var(--space-xs);
+    font-size: 1.5rem;
+}
+
+.portfolio-item-overlay p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.portfolio-item-footer {
+    padding: var(--space-lg);
+}
+
+.portfolio-tags {
+    display: flex;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: var(--space-xs) var(--space-sm);
+    background: rgba(160, 90, 255, 0.1);
+    border: 1px solid rgba(160, 90, 255, 0.3);
+    border-radius: var(--radius-sm);
+    color: var(--color-primary-light);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Project Modal */
+.project-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-lg);
+    overflow-y: auto;
+}
+
+.project-modal {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    border: 1px solid var(--color-border);
+}
+
+.modal-close {
+    position: absolute;
+    top: var(--space-lg);
+    right: var(--space-lg);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: var(--color-primary);
+    transform: rotate(90deg);
+}
+
+.modal-image {
+    height: 400px;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.modal-content {
+    padding: var(--space-2xl);
+}
+
+.modal-content h2 {
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+}
+
+.modal-description {
+    font-size: 1.1rem;
+    margin-bottom: var(--space-xl);
+    line-height: 1.7;
+}
+
+.modal-tags {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-xl);
+}
+
+.modal-note {
+    padding: var(--space-lg);
+    background: rgba(160, 90, 255, 0.05);
+    border: 1px solid rgba(160, 90, 255, 0.2);
+    border-radius: var(--radius-md);
+}
+
+.modal-note p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-filters {
+        gap: var(--space-xs);
+    }
+
+    .filter-btn {
+        padding: var(--space-xs) var(--space-md);
+        font-size: 0.85rem;
+    }
+
+    .modal-image {
+        height: 250px;
+    }
+
+    .modal-content {
+        padding: var(--space-xl);
+    }
+
+    .project-modal-backdrop {
+        padding: var(--space-sm);
+    }
+}
