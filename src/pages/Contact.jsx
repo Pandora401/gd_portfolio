@@ -51,7 +51,6 @@ const Contact = () => {
 
     const projectTypes = [
         'Product Design',
-        'Web Design',
         'Logo Design',
         'Social Media Design',
         'Presentation Design',
@@ -88,7 +87,7 @@ const Contact = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h1>Let's Create Something <span className="gradient-text">Amazing</span></h1>
+                        <h1>Lets Create Something <span className="gradient-text">Amazing</span></h1>
                         <p>
                             Ready to bring your vision to life? Fill out the form below and
                             I'll get back to you within 24 hours.
@@ -121,17 +120,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4>Email</h4>
-                                        <a href="mailto:hello@designstudio.com">hello@designstudio.com</a>
-                                    </div>
-                                </div>
-
-                                <div className="contact-method">
-                                    <div className="method-icon">
-                                        <HiPhone />
-                                    </div>
-                                    <div>
-                                        <h4>Phone</h4>
-                                        <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                                        <a href="mailto:brideymason@gmail.com">brideymason@gmail.com</a>
                                     </div>
                                 </div>
 

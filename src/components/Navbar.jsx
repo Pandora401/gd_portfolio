@@ -34,7 +34,7 @@ const Navbar = () => {
     >
       <div className="container navbar-content">
         <Link to="/" className="logo">
-          <span className="gradient-text">Design</span>Studio
+          <span className="gradient-text">Bridey </span>Mason
         </Link>
 
         {/* Desktop Menu */}

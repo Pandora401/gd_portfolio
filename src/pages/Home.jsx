@@ -24,12 +24,12 @@ const Home = () => {
             description: 'User-centered product design that delights and converts.',
             color: 'hsl(260, 85%, 65%)'
         },
-        {
-            icon: <FaLaptopCode />,
-            title: 'Web Design',
-            description: 'Modern, responsive websites that make an impact.',
-            color: 'hsl(320, 85%, 65%)'
-        },
+        // {
+        //     icon: <FaLaptopCode />,
+        //     title: 'Web Design',
+        //     description: 'Modern, responsive websites that make an impact.',
+        //     color: 'hsl(320, 85%, 65%)'
+        // },
         {
             icon: <FaPalette />,
             title: 'Logo Design',
@@ -212,7 +212,7 @@ const Home = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h2>Why Work With Me?</h2>
+                            <h2>Why Work With Me</h2>
                             <p className="why-intro">
                                 I combine creativity with strategic thinking to deliver designs
                                 that not only look amazing but also achieve your business goals.
@@ -282,8 +282,8 @@ const Home = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2>Ready to Start Your Project?</h2>
-                    <p>Let's collaborate and create something amazing together</p>
+                    <h2>Ready to Start Your Project</h2>
+                    <p>Lets collaborate and create something amazing together</p>
                     <Link to="/contact" className="btn btn-primary btn-lg">
                         Get in Touch <HiArrowRight />
                     </Link>

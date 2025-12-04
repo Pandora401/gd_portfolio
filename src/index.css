@@ -1,27 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Custom Font */
+@font-face {
+  font-family: 'CherryToday';
+  src: url('./assets/fonts/CherryTodayDemoRegular-BF66208bbb98023.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
-  /* Colors - Modern, vibrant palette */
+  /* Colors - Minimalist Black & White with Green Accents */
   --color-primary: hsl(0, 0%, 0%);
-  --color-primary-dark: hsl(0, 100%, 50%);
-  --color-primary-light: hsl(138, 83%, 33%);
-  --color-secondary: hsl(118, 79%, 30%);
-  --color-accent: hsl(180, 85%, 60%);
+  --color-primary-dark: hsl(0, 0%, 10%);
+  --color-primary-light: hsl(0, 0%, 20%);
+  --color-secondary: hsl(0, 0%, 100%);
+  --color-accent: hsl(145, 70%, 45%);
+  --color-accent-light: hsl(145, 70%, 55%);
+  --color-accent-subtle: hsl(145, 70%, 95%);
 
   /* Neutrals */
   --color-bg: hsl(0, 0%, 100%);
-  --color-bg-elevated: hsl(0, 5%, 89%);
-  --color-bg-card: hsl(0, 0%, 96%);
+  --color-bg-elevated: hsl(0, 0%, 98%);
+  --color-bg-card: hsl(0, 0%, 100%);
   --color-text: hsl(0, 0%, 0%);
-  --color-text-muted: hsl(0, 3%, 53%);
-  --color-border: hsl(0, 0%, 96%);
-  --color-primary-blur: hsl(187, 100%, 73%);
-  --color-secondary-blur: hsl(185, 100%, 98%);
+  --color-text-muted: hsl(0, 0%, 45%);
+  --color-border: hsl(0, 0%, 90%);
+  --color-border-light: hsl(0, 0%, 95%);
 
-  /* Gradients */
-  --gradient-blurs: linear-gradient(135deg, var(--color-primary-blur) 0%, var(--color-secondary-blur) 100%);
-  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  --gradient-accent: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
+  /* Gradients - Subtle */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
   --gradient-overlay: linear-gradient(180deg, transparent 0%, var(--color-bg) 100%);
 
   /* Spacing */
@@ -35,13 +44,13 @@
 
   /* Typography */
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display: 'Playfair Display', serif;
+  --font-display: 'CherryToday', serif;
 
-  /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 40px rgba(13, 148, 35, 0.3);
+  /* Shadows - Subtle */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 0 1px var(--color-accent);
 
   /* Border Radius */
   --radius-sm: 8px;
@@ -138,10 +147,7 @@ a:hover {
 }
 
 .gradient-text {
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-accent);
 }
 
 .glass {
@@ -157,27 +163,26 @@ a:hover {
   align-items: center;
   gap: var(--space-xs);
   padding: var(--space-md) var(--space-xl);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  border: none;
-  border-radius: var(--radius-md);
+  border: 2px solid var(--color-primary);
+  border-radius: 0;
   cursor: pointer;
   transition: all var(--transition-base);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   position: relative;
-  overflow: hidden;
 }
 
 .btn-primary {
-  background: var(--gradient-primary);
+  background: var(--color-primary);
   color: white;
-  box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translateX(4px);
 }
 
 .btn-outline {
@@ -189,22 +194,21 @@ a:hover {
 .btn-outline:hover {
   background: var(--color-primary);
   color: white;
-  transform: translateY(-2px);
+  transform: translateX(4px);
 }
 
 /* Card Styles */
 .card {
   background: var(--color-bg-card);
-  border-radius: var(--radius-lg);
+  border-radius: 0;
   padding: var(--space-xl);
   border: 1px solid var(--color-border);
   transition: all var(--transition-base);
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-primary);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
 }
 
 /* Grid Layouts */
@@ -250,30 +254,30 @@ a:hover {
 
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(7, 150, 38, 0.3);
+    border-color: var(--color-border);
   }
 
   50% {
-    box-shadow: 0 0 40px rgba(5, 124, 35, 0.6);
+    border-color: var(--color-accent);
   }
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-bg);
+  background: var(--color-bg-elevated);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-primary);
-  border-radius: 5px;
+  background: var(--color-border);
+  border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-primary-light);
+  background: var(--color-accent);
 }
 
 /* Responsive */

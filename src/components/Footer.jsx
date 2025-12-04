@@ -13,7 +13,7 @@ const Footer = () => {
                     {/* Brand Section */}
                     <div className="footer-section">
                         <h3 className="footer-logo">
-                            <span className="gradient-text">Design</span>Studio
+                            <span className="gradient-text">Bridey </span>Mason
                         </h3>
                         <p className="footer-tagline">
                             Crafting exceptional digital experiences through innovative design solutions.
@@ -50,7 +50,6 @@ const Footer = () => {
                         <h4>Services</h4>
                         <ul className="footer-links">
                             <li>Product Design</li>
-                            <li>Web Design</li>
                             <li>Logo Design</li>
                             <li>Social Media</li>
                             <li>Presentations</li>
@@ -63,15 +62,11 @@ const Footer = () => {
                         <ul className="footer-contact">
                             <li>
                                 <HiMail size={18} />
-                                <span>hello@designstudio.com</span>
-                            </li>
-                            <li>
-                                <HiPhone size={18} />
-                                <span>+1 (555) 123-4567</span>
+                                <span>brideymason@gmail.com</span>
                             </li>
                             <li>
                                 <HiLocationMarker size={18} />
-                                <span>Melbourne, Australia</span>
+                                <span>Gold Coast, Australia</span>
                             </li>
                         </ul>
                     </div>
@@ -79,7 +74,7 @@ const Footer = () => {
 
                 {/* Bottom Bar */}
                 <div className="footer-bottom">
-                    <p>&copy; {currentYear} DesignStudio. All rights reserved.</p>
+                    <p>&copy; {currentYear} Bridey Mason. All rights reserved.</p>
                     <div className="footer-bottom-links">
                         <a href="#">Privacy Policy</a>
                         <a href="#">Terms of Service</a>

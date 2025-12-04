@@ -26,19 +26,19 @@ const Services = () => {
             ],
             color: 'hsl(260, 85%, 65%)'
         },
-        {
-            icon: <FaLaptopCode />,
-            title: 'Web Design',
-            description: 'Modern, responsive websites that engage users and drive conversions.',
-            features: [
-                'Responsive Design',
-                'Landing Pages',
-                'E-commerce Design',
-                'Web Applications',
-                'Figma to Code'
-            ],
-            color: 'hsl(320, 85%, 65%)'
-        },
+        // {
+        //     icon: <FaLaptopCode />,
+        //     title: 'Web Design',
+        //     description: 'Modern, responsive websites that engage users and drive conversions.',
+        //     features: [
+        //         'Responsive Design',
+        //         'Landing Pages',
+        //         'E-commerce Design',
+        //         'Web Applications',
+        //         'Figma to Code'
+        //     ],
+        //     color: 'hsl(320, 85%, 65%)'
+        // },
         {
             icon: <FaPalette />,
             title: 'Logo Design',
@@ -154,7 +154,7 @@ const Services = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h1>Services & <span className="gradient-text">Pricing</span></h1>
+                        <h1>Services  and  <span className="gradient-text">Pricing</span></h1>
                         <p>
                             Comprehensive design solutions tailored to your needs.
                             From branding to digital products, I've got you covered.

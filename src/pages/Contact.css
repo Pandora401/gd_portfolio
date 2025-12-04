@@ -220,7 +220,7 @@
 .form-group textarea:focus {
     outline: none;
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(160, 90, 255, 0.1);
+    box-shadow: 0 0 0 3px rgba(90, 255, 145, 0.1);
 }
 
 .form-group textarea {

@@ -8,15 +8,15 @@ const Portfolio = () => {
     const [filter, setFilter] = useState('all');
 
     const projects = [
-        {
-            id: 1,
-            title: 'E-Commerce Platform',
-            category: 'web',
-            description: 'Modern e-commerce platform with seamless checkout experience',
-            fullDescription: 'A comprehensive e-commerce platform featuring intuitive navigation, advanced filtering, and a streamlined checkout process. Built with user experience at the forefront.',
-            tags: ['UI/UX', 'Web Design', 'E-Commerce'],
-            color: 'hsl(260, 85%, 65%)'
-        },
+        // {
+        //     id: 1,
+        //     title: 'E-Commerce Platform',
+        //     category: 'web',
+        //     description: 'Modern e-commerce platform with seamless checkout experience',
+        //     fullDescription: 'A comprehensive e-commerce platform featuring intuitive navigation, advanced filtering, and a streamlined checkout process. Built with user experience at the forefront.',
+        //     tags: ['UI/UX', 'Web Design', 'E-Commerce'],
+        //     color: 'hsl(260, 85%, 65%)'
+        // },
         {
             id: 2,
             title: 'Fitness App Redesign',
@@ -62,15 +62,15 @@ const Portfolio = () => {
             tags: ['Branding', 'Print', 'Hospitality'],
             color: 'hsl(30, 75%, 55%)'
         },
-        {
-            id: 7,
-            title: 'Real Estate Website',
-            category: 'web',
-            description: 'Luxury real estate website with virtual tours',
-            fullDescription: 'High-end real estate platform featuring immersive property galleries, virtual tours, and advanced search functionality.',
-            tags: ['Web Design', 'Real Estate', 'Luxury'],
-            color: 'hsl(180, 85%, 60%)'
-        },
+        // {
+        //     id: 7,
+        //     title: 'Real Estate Website',
+        //     category: 'web',
+        //     description: 'Luxury real estate website with virtual tours',
+        //     fullDescription: 'High-end real estate platform featuring immersive property galleries, virtual tours, and advanced search functionality.',
+        //     tags: ['Web Design', 'Real Estate', 'Luxury'],
+        //     color: 'hsl(180, 85%, 60%)'
+        // },
         {
             id: 8,
             title: 'Startup Pitch Deck',
@@ -93,7 +93,7 @@ const Portfolio = () => {
 
     const categories = [
         { id: 'all', name: 'All Projects' },
-        { id: 'web', name: 'Web Design' },
+        // { id: 'web', name: 'Web Design' },
         { id: 'product', name: 'Product Design' },
         { id: 'branding', name: 'Branding' },
         { id: 'social', name: 'Social Media' },
