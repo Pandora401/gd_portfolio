@@ -95,9 +95,9 @@ const Services = () => {
 
     const pricingPlans = [
         {
-            name: 'Starter',
-            price: '$500',
-            period: 'per project',
+            name: 'Standard',
+            price: '$45',
+            period: 'per hour',
             description: 'Perfect for small projects and quick deliverables',
             features: [
                 '1 Design Concept',
@@ -109,9 +109,9 @@ const Services = () => {
             popular: false
         },
         {
-            name: 'Professional',
-            price: '$1,500',
-            period: 'per project',
+            name: 'Enterprise',
+            price: '$60',
+            period: 'per hour',
             description: 'Ideal for comprehensive design projects',
             features: [
                 '3 Design Concepts',
@@ -125,9 +125,9 @@ const Services = () => {
             popular: true
         },
         {
-            name: 'Enterprise',
-            price: 'Custom',
-            period: 'contact for quote',
+            name: 'Premium',
+            price: '$70',
+            period: 'per hour',
             description: 'For large-scale projects and ongoing partnerships',
             features: [
                 'Unlimited Concepts',
@@ -275,7 +275,7 @@ const Services = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2>Not Sure Which Package to Choose?</h2>
+                    <h2>Not Sure Which Package to Choose<span className="num">?</span></h2>
                     <p>Let's discuss your project and find the perfect solution together</p>
                     <Link to="/contact" className="btn btn-primary btn-lg">
                         Schedule a Consultation <HiArrowRight />

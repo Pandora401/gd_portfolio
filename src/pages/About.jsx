@@ -52,7 +52,7 @@ const About = () => {
                                 I have a passion for creating visually appealing and functional designs that help businesses communicate their message effectively. I enjoy working with a variety of clients and am always looking for new challenges to take on.
                             </p>
                             <p>
-                                I am based in Brisbane, Queensland and am available for remote work.
+                                I am based on the beautiful Gold Coast, Queensland and am available for remote work or travel to Brisbane too!
                             </p>
                         </motion.div>
                     </div>
