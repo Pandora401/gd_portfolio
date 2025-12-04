@@ -285,7 +285,7 @@ const Home = () => {
                         </motion.div>
 
                         <motion.div
-                            className="why-visual"
+                            className="why-visual dark-text-light"
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -323,7 +323,7 @@ const Home = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2>Ready to Start Your Project</h2>
+                    <h2>Ready to Start Your Project<span className="num">?</span></h2>
                     <p>Lets collaborate and create something amazing together</p>
                     <Link to="/contact" className="btn btn-primary btn-lg">
                         Get in Touch <HiArrowRight />

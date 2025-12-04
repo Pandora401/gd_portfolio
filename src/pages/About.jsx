@@ -41,21 +41,18 @@ const About = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h2>Hello, I'm Bridey</h2>
+                            <h2>Hello<span className="num">,</span> I<span className="num">'</span>m Bridey</h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                I work as a freelance designer specialising in packaging design, logo design and brand identity development.
                             </p>
                             <p>
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                culpa qui officia deserunt mollit anim id est laborum.
+                                I hold a Diploma of Graphic Design and currently studying towards a Bachelor of Design (Visual Communication) at Griffith University.
                             </p>
                             <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                                architecto beatae vitae dicta sunt explicabo.
+                                I have a passion for creating visually appealing and functional designs that help businesses communicate their message effectively. I enjoy working with a variety of clients and am always looking for new challenges to take on.
+                            </p>
+                            <p>
+                                I am based in Brisbane, Queensland and am available for remote work.
                             </p>
                         </motion.div>
                     </div>
@@ -76,20 +73,23 @@ const About = () => {
                     </motion.div>
 
                     <div className="skills-grid">
-                        {['Product Design', 'Logo Design', 'Social Media', 'Presentations', 'Labelling'].map((skill, index) => (
+                        {[
+                            { skill: 'Product Design', description: 'Crafting intuitive and visually appealing product experiences from concept to execution.' },
+                            { skill: 'Logo Design', description: 'Developing unique and memorable brand marks that effectively represent a company\'s identity.' },
+                            { skill: 'Social Media', description: 'Creating engaging visual content and strategies for various social media platforms.' },
+                            { skill: 'Presentations', description: 'Designing impactful and clear presentations that convey complex information effectively.' },
+                            { skill: 'Labelling', description: 'Designing compliant and attractive labels for products, enhancing brand presence and consumer information.' }
+                        ].map((item, index) => (
                             <motion.div
-                                key={skill}
+                                key={item.skill}
                                 className="skill-card"
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
-                                <h3>{skill}</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
-                                </p>
+                                <h3>{item.skill}</h3>
+                                <p className="dark-text-dark">{item.description}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -115,33 +115,16 @@ const About = () => {
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            <div className="timeline-dot"></div>
-                            <div className="timeline-content">
-                                <h3>2023 - Present</h3>
-                                <h4>Freelance Designer</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
-                                </p>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            className="timeline-item"
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
                             <div className="timeline-dot"></div>
                             <div className="timeline-content">
-                                <h3>2021 - 2023</h3>
-                                <h4>Previous Experience</h4>
-                                <p>
-                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                    fugiat nulla pariatur.
+                                <h3>2024 - Present</h3>
+                                <h4>Freelance Graphic Designer</h4>
+                                <p className="dark-text-dark">
+                                    I have worked with a range of clients, including small businesses, startups, and
+                                    established companies, to create a range of marketing materials, including product
+                                    labels, social media graphics, and presentations.
                                 </p>
                             </div>
                         </motion.div>
@@ -155,11 +138,29 @@ const About = () => {
                         >
                             <div className="timeline-dot"></div>
                             <div className="timeline-content">
-                                <h3>2019 - 2021</h3>
-                                <h4>Earlier Work</h4>
-                                <p>
-                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                    deserunt mollit anim id est laborum.
+                                <h3>2024-2025</h3>
+                                <h4>Graphic Designer</h4>
+                                <h5>OzKleen Asia Pacific Pty Ltd</h5>
+                                <p className="dark-text-dark">
+                                    I was responsible for creating a range of product labels and marketing materials for OzKleen, including product labels, social media graphics, and presentations.
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            className="timeline-item"
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                        >
+                            <div className="timeline-dot"></div>
+                            <div className="timeline-content">
+                                <h3>2023-2024</h3>
+                                <h4>Graphic Design Student</h4>
+                                <h5>TAFE Queensland</h5>
+                                <p className="dark-text-dark">
+                                    Studied graphic design principles, software proficiency, and creative problem-solving, culminating in a Diploma of Graphic Design.
                                 </p>
                             </div>
                         </motion.div>

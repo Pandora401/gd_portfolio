@@ -126,6 +126,14 @@ h4 {
   /* font-family: var(--font-display); */
 }
 
+/* Numbers and special characters in headings use sans-serif */
+h1 .num,
+h2 .num,
+h4 .num {
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
 p {
   margin-bottom: var(--space-md);
   color: var(--color-text-muted);
@@ -156,6 +164,57 @@ a:hover {
 
 .gradient-text {
   color: var(--color-accent);
+}
+
+/* Dark Mode Text Control Utilities */
+/* Use these classes to explicitly control text color in dark mode */
+
+/* Force light text in dark mode (for dark backgrounds) */
+.dark-text-light h1,
+.dark-text-light h2,
+.dark-text-light h3,
+.dark-text-light h4,
+.dark-text-light h5,
+.dark-text-light h6 {
+  color: var(--color-text);
+}
+
+body.dark-mode .dark-text-light h1,
+body.dark-mode .dark-text-light h2,
+body.dark-mode .dark-text-light h3,
+body.dark-mode .dark-text-light h4,
+body.dark-mode .dark-text-light h5,
+body.dark-mode .dark-text-light h6 {
+  color: var(--color-text) !important;
+}
+
+body.dark-mode .dark-text-light p,
+body.dark-mode .dark-text-light {
+  color: var(--color-text-muted) !important;
+}
+
+/* Force dark text in dark mode (for light backgrounds like cards) */
+.dark-text-dark h1,
+.dark-text-dark h2,
+.dark-text-dark h3,
+.dark-text-dark h4,
+.dark-text-dark h5,
+.dark-text-dark h6 {
+  color: var(--color-text);
+}
+
+body.dark-mode .dark-text-dark h1,
+body.dark-mode .dark-text-dark h2,
+body.dark-mode .dark-text-dark h3,
+body.dark-mode .dark-text-dark h4,
+body.dark-mode .dark-text-dark h5,
+body.dark-mode .dark-text-dark h6 {
+  color: hsl(25, 30%, 15%) !important;
+}
+
+body.dark-mode .dark-text-dark p,
+body.dark-mode .dark-text-dark {
+  color: hsl(25, 15%, 45%) !important;
 }
 
 .glass {
