@@ -1,0 +1,188 @@
+.theme-toggle {
+    position: fixed;
+    top: 100px;
+    right: var(--space-lg);
+    z-index: 1001;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-card);
+    border: 2px solid var(--color-border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-md);
+}
+
+.theme-toggle:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: white;
+    transform: rotate(90deg) scale(1.1);
+}
+
+.theme-toggle svg {
+    transition: transform var(--transition-base);
+}
+
+/* Glass Theme Styles */
+body.glass-theme {
+    background: linear-gradient(135deg,
+            hsl(280, 70%, 85%) 0%,
+            hsl(220, 70%, 85%) 25%,
+            hsl(320, 70%, 85%) 50%,
+            hsl(30, 70%, 85%) 100%);
+    background-attachment: fixed;
+    transition: background 0.5s ease;
+}
+
+body.glass-theme .navbar {
+    background: rgba(255, 255, 255, 0.199);
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+body.glass-theme .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.199);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+body.glass-theme .card,
+body.glass-theme .service-card,
+body.glass-theme .service-detail-card,
+body.glass-theme .pricing-card,
+body.glass-theme .portfolio-item,
+body.glass-theme .contact-form-wrapper,
+body.glass-theme .contact-info,
+body.glass-theme .why-visual .visual-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+body.glass-theme .footer {
+    background: rgba(255, 255, 255, 0.199);
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+body.glass-theme .hero-badge {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+body.glass-theme .mobile-menu {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+body.glass-theme .btn-outline {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+body.glass-theme .theme-toggle {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+body.glass-theme .services-section,
+body.glass-theme .services-detail-section,
+body.glass-theme .pricing-section,
+body.glass-theme .portfolio-content,
+body.glass-theme .contact-content-section {
+    background: transparent;
+}
+
+body.glass-theme .services-hero,
+body.glass-theme .portfolio-hero,
+body.glass-theme .contact-hero {
+    background: transparent;
+}
+
+body.glass-theme .services-hero::before,
+body.glass-theme .portfolio-hero::before,
+body.glass-theme .contact-hero::before {
+    display: none;
+}
+
+body.glass-theme .filter-btn {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+body.glass-theme .filter-btn.active {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+body.glass-theme input,
+body.glass-theme select,
+body.glass-theme textarea {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+body.glass-theme .project-modal {
+    background: rgba(255, 255, 255, 0.199);
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+body.glass-theme .stat-item h3,
+body.glass-theme .gradient-text {
+    background: linear-gradient(135deg,
+            hsl(280, 70%, 45%) 0%,
+            hsl(320, 70%, 45%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Smooth transitions for theme switching */
+.navbar,
+.card,
+.service-card,
+.service-detail-card,
+.pricing-card,
+.portfolio-item,
+.contact-form-wrapper,
+.footer,
+.hero-badge,
+.mobile-menu,
+.btn-outline,
+.theme-toggle,
+.filter-btn,
+input,
+select,
+textarea {
+    transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .theme-toggle {
+        top: 80px;
+        right: var(--space-md);
+        width: 45px;
+        height: 45px;
+    }
+}

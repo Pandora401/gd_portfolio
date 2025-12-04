@@ -150,10 +150,11 @@
 }
 
 .service-card {
-    background: var(--color-bg-card);
+    background: rgba(255, 255, 255, 0.199);
+    backdrop-filter: blur(60px);
     padding: var(--space-xl);
     border-radius: var(--radius-lg);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     transition: all var(--transition-base);
     cursor: pointer;
 }
@@ -252,21 +253,24 @@
 }
 
 .card-1 {
-    background: linear-gradient(260deg, var(--color-secondary), var(--color-primary));
+    background: rgba(255, 255, 255, 0.199);
+    backdrop-filter: blur(60px);
     top: 0;
     left: 0;
     z-index: 3;
 }
 
 .card-2 {
-    background: linear-gradient(110deg, var(--color-secondary), var(--color-primary));
+    background: rgba(255, 255, 255, 0.199);
+    backdrop-filter: blur(60px);
     top: 100px;
     right: 0;
     z-index: 2;
 }
 
 .card-3 {
-    background: linear-gradient(190deg, var(--color-secondary), var(--color-primary));
+    background: rgba(255, 255, 255, 0.199);
+    backdrop-filter: blur(60px);
     bottom: 0;
     left: 50px;
     z-index: 1;

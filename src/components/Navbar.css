@@ -10,8 +10,8 @@
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.199);
+    backdrop-filter: blur(60px);
     box-shadow: var(--shadow-md);
     padding: var(--space-sm) 0;
 }
