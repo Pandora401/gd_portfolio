@@ -10,26 +10,26 @@
 }
 
 :root {
-  /* Colors - Minimalist Black & White with Green Accents */
-  --color-primary: hsl(0, 0%, 0%);
-  --color-primary-dark: hsl(0, 0%, 10%);
-  --color-primary-light: hsl(0, 0%, 20%);
-  --color-secondary: hsl(0, 0%, 100%);
-  --color-accent: hsl(145, 70%, 45%);
-  --color-accent-light: hsl(145, 70%, 55%);
-  --color-accent-subtle: hsl(145, 70%, 95%);
+  /* Autumn Light Mode Colors */
+  --color-primary: hsl(25, 75%, 45%);
+  --color-primary-dark: hsl(25, 75%, 35%);
+  --color-primary-light: hsl(25, 75%, 55%);
+  --color-secondary: hsl(15, 70%, 50%);
+  --color-accent: hsl(35, 80%, 55%);
+  --color-accent-light: hsl(35, 80%, 65%);
+  --color-accent-subtle: hsl(35, 80%, 95%);
 
-  /* Neutrals */
-  --color-bg: hsl(0, 0%, 100%);
-  --color-bg-elevated: hsl(0, 0%, 98%);
-  --color-bg-card: hsl(0, 0%, 100%);
-  --color-text: hsl(0, 0%, 0%);
-  --color-text-muted: hsl(0, 0%, 45%);
-  --color-border: hsl(0, 0%, 90%);
-  --color-border-light: hsl(0, 0%, 95%);
+  /* Neutrals - Light Mode */
+  --color-bg: hsl(30, 30%, 98%);
+  --color-bg-elevated: hsl(30, 25%, 95%);
+  --color-bg-card: hsl(30, 20%, 97%);
+  --color-text: hsl(25, 30%, 15%);
+  --color-text-muted: hsl(25, 15%, 45%);
+  --color-border: hsl(30, 20%, 88%);
+  --color-border-light: hsl(30, 15%, 92%);
 
-  /* Gradients - Subtle */
-  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  /* Gradients - Autumn */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   --gradient-accent: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
   --gradient-overlay: linear-gradient(180deg, transparent 0%, var(--color-bg) 100%);
 
@@ -78,16 +78,17 @@ html {
 body {
   font-family: var(--font-body);
   background: linear-gradient(135deg,
-      hsl(180, 74%, 90%) 0%,
-      hsl(0, 0%, 100%) 25%,
-      hsl(0, 0%, 100%) 50%,
-      hsl(30, 70%, 85%) 100%);
+      hsl(25, 60%, 92%) 0%,
+      hsl(35, 55%, 95%) 30%,
+      hsl(15, 50%, 94%) 70%,
+      hsl(30, 45%, 93%) 100%);
   background-attachment: fixed;
   color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: all 0.3s ease;
 }
 
 /* Typography */
@@ -138,7 +139,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-primary-light);
+  color: var(--color-accent);
 }
 
 /* Utility Classes */
@@ -285,6 +286,43 @@ a:hover {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent);
+}
+
+/* Dark Mode */
+body.dark-mode {
+  --color-primary: hsl(25, 70%, 55%);
+  --color-primary-dark: hsl(25, 70%, 45%);
+  --color-primary-light: hsl(25, 70%, 65%);
+  --color-secondary: hsl(15, 65%, 60%);
+  --color-accent: hsl(35, 75%, 60%);
+  --color-accent-light: hsl(35, 75%, 70%);
+
+  --color-bg: hsl(25, 20%, 12%);
+  --color-bg-elevated: hsl(25, 18%, 16%);
+  --color-bg-card: hsl(25, 15%, 14%);
+  --color-text: hsl(30, 20%, 95%);
+  --color-text-muted: hsl(30, 10%, 65%);
+  --color-border: hsl(25, 15%, 25%);
+  --color-border-light: hsl(25, 12%, 20%);
+
+  background: linear-gradient(135deg,
+      hsl(25, 25%, 10%) 0%,
+      hsl(20, 20%, 12%) 30%,
+      hsl(15, 18%, 11%) 70%,
+      hsl(30, 22%, 13%) 100%);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .gradient-text {
+  background: linear-gradient(135deg,
+      hsl(25, 70%, 55%) 0%,
+      hsl(35, 75%, 60%) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Responsive */

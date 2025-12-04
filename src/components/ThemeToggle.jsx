@@ -1,29 +1,29 @@
 import { useState, useEffect } from 'react';
-import { HiSparkles, HiX } from 'react-icons/hi';
+import { HiSun, HiMoon } from 'react-icons/hi';
 import './ThemeToggle.css';
 
 const ThemeToggle = () => {
-    const [isGlassMode, setIsGlassMode] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
         // Check localStorage for saved theme preference
         const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'glass') {
-            setIsGlassMode(true);
-            document.body.classList.add('glass-theme');
+        if (savedTheme === 'dark') {
+            setIsDarkMode(true);
+            document.body.classList.add('dark-mode');
         }
     }, []);
 
     const toggleTheme = () => {
-        const newMode = !isGlassMode;
-        setIsGlassMode(newMode);
+        const newMode = !isDarkMode;
+        setIsDarkMode(newMode);
 
         if (newMode) {
-            document.body.classList.add('glass-theme');
-            localStorage.setItem('theme', 'glass');
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
         } else {
-            document.body.classList.remove('glass-theme');
-            localStorage.setItem('theme', 'minimal');
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
         }
     };
 
@@ -32,9 +32,9 @@ const ThemeToggle = () => {
             className="theme-toggle"
             onClick={toggleTheme}
             aria-label="Toggle theme"
-            title={isGlassMode ? 'Switch to Minimal' : 'Switch to Glass'}
+            title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
         >
-            {isGlassMode ? <HiX size={20} /> : <HiSparkles size={20} />}
+            {isDarkMode ? <HiSun size={20} /> : <HiMoon size={20} />}
         </button>
     );
 };
