@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -11,7 +11,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/gd_portfolio">
+    <Router>
       <div className="app">
         <ScrollToTop />
         <Navbar />
