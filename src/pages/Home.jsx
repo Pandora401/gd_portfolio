@@ -9,6 +9,7 @@ import {
     FaFileAlt,
     FaTag
 } from 'react-icons/fa';
+import profileImage from '../assets/images/pfp.jpeg';
 import './Home.css';
 
 const Home = () => {
@@ -199,6 +200,45 @@ const Home = () => {
                             View All Services & Pricing <HiArrowRight />
                         </Link>
                     </motion.div>
+                </div>
+            </section>
+
+            {/* Profile Section */}
+            <section className="section profile-section">
+                <div className="container">
+                    <div className="profile-grid">
+                        <motion.div
+                            className="profile-image-wrapper"
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            <img src={profileImage} alt="Bridey Mason" className="profile-image" />
+                        </motion.div>
+
+                        <motion.div
+                            className="profile-content"
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            <h2>Meet the Designer</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris.
+                            </p>
+                            <p>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                            </p>
+                            <Link to="/about" className="btn btn-outline">
+                                Learn More About Me <HiArrowRight />
+                            </Link>
+                        </motion.div>
+                    </div>
                 </div>
             </section>
 

@@ -156,7 +156,6 @@
     border-radius: var(--radius-lg);
     border: 1px solid rgba(255, 255, 255, 0.5);
     transition: all var(--transition-base);
-    /* cursor: pointer; */
 }
 
 .service-card:hover {
@@ -188,6 +187,40 @@
 
 .services-cta {
     text-align: center;
+}
+
+/* Profile Section */
+.profile-section {
+    background: transparent;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.profile-image-wrapper {
+    position: relative;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    border: 3px solid var(--color-border);
+}
+
+.profile-content h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.profile-content p {
+    margin-bottom: var(--space-lg);
+    font-size: 1.05rem;
+    line-height: 1.8;
 }
 
 /* Why Section */
@@ -327,6 +360,18 @@
 }
 
 /* Responsive */
+@media (max-width: 968px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .profile-image-wrapper {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
 @media (max-width: 768px) {
     .hero {
         min-height: 90vh;
