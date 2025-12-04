@@ -278,7 +278,7 @@
     display: flex;
     align-items: flex-end;
     transition: transform var(--transition-base);
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .visual-card:hover {
@@ -286,7 +286,7 @@
 }
 
 .card-1 {
-    background: rgba(255, 255, 255, 0.199);
+    background: rgba(164, 247, 164, 0.199);
     backdrop-filter: blur(60px);
     top: 0;
     left: 0;
@@ -294,7 +294,7 @@
 }
 
 .card-2 {
-    background: rgba(255, 255, 255, 0.199);
+    background: rgba(6, 115, 6, 0.199);
     backdrop-filter: blur(60px);
     top: 100px;
     right: 0;
@@ -302,7 +302,7 @@
 }
 
 .card-3 {
-    background: rgba(255, 255, 255, 0.199);
+    background: rgba(16, 231, 16, 0.199);
     backdrop-filter: blur(60px);
     bottom: 0;
     left: 50px;

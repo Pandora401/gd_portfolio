@@ -99,6 +99,7 @@ const Home = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
+                        style={{ fontSize: 'clamp(3.5rem, 10vw, 7rem)' }}
                     >
                         Design That <span className="gradient-text">Transforms</span> Your Vision
                     </motion.h1>
@@ -291,24 +292,59 @@ const Home = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <div className="visual-card card-1">
+                            <motion.div
+                                className="visual-card card-1"
+                                animate={{
+                                    y: [0, -15, 0],
+                                    rotate: [0, 2, 0]
+                                }}
+                                transition={{
+                                    duration: 4,
+                                    repeat: Infinity,
+                                    ease: "easeInOut"
+                                }}
+                            >
                                 <div className="visual-content">
                                     <h3>Creative</h3>
                                     <p>Innovation</p>
                                 </div>
-                            </div>
-                            <div className="visual-card card-2">
+                            </motion.div>
+                            <motion.div
+                                className="visual-card card-2"
+                                animate={{
+                                    y: [0, -20, 0],
+                                    rotate: [0, -2, 0]
+                                }}
+                                transition={{
+                                    duration: 5,
+                                    repeat: Infinity,
+                                    ease: "easeInOut",
+                                    delay: 0.5
+                                }}
+                            >
                                 <div className="visual-content">
                                     <h3>Strategic</h3>
                                     <p>Thinking</p>
                                 </div>
-                            </div>
-                            <div className="visual-card card-3">
+                            </motion.div>
+                            <motion.div
+                                className="visual-card card-3"
+                                animate={{
+                                    y: [0, -18, 0],
+                                    rotate: [0, 1.5, 0]
+                                }}
+                                transition={{
+                                    duration: 4.5,
+                                    repeat: Infinity,
+                                    ease: "easeInOut",
+                                    delay: 1
+                                }}
+                            >
                                 <div className="visual-content">
                                     <h3>Results</h3>
                                     <p>Driven</p>
                                 </div>
-                            </div>
+                            </motion.div>
                         </motion.div>
                     </div>
                 </div>
