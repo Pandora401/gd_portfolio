@@ -242,10 +242,6 @@ const Services = () => {
                                         </li>
                                     ))}
                                 </ul>
-
-                                <div style={{ display: 'flex', justifyContent: 'center', marginTop: 'var(--space-lg)' }}>
-                                    <ThemeToggle />
-                                </div>
                             </motion.div>
                         ))}
                     </div>
