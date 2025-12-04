@@ -22,7 +22,7 @@ const Home = () => {
             icon: <FaPaintBrush />,
             title: 'Product Design',
             description: 'User-centered product design that delights and converts.',
-            color: 'hsl(260, 85%, 65%)'
+            color: 'hsla(0, 85%, 65%, 1.00)'
         },
         // {
         //     icon: <FaLaptopCode />,
@@ -172,7 +172,8 @@ const Home = () => {
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                transition={{ duration: 0.6 }}
+                                whileTap={{ scale: 0.6 }}
                                 whileHover={{ y: -8 }}
                             >
                                 <div
@@ -212,7 +213,7 @@ const Home = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h2>Why Work With Me</h2>
+                            <h2>Lets work together</h2>
                             <p className="why-intro">
                                 I combine creativity with strategic thinking to deliver designs
                                 that not only look amazing but also achieve your business goals.

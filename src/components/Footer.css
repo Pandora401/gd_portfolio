@@ -48,8 +48,6 @@
 }
 
 .social-links a:hover {
-    background: var(--gradient-primary);
-    border-color: transparent;
     transform: translateY(-3px);
     box-shadow: var(--shadow-md);
 }

@@ -156,7 +156,7 @@
     border-radius: var(--radius-lg);
     border: 1px solid rgba(255, 255, 255, 0.5);
     transition: all var(--transition-base);
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .service-card:hover {
@@ -278,13 +278,13 @@
 
 .visual-content h3 {
     font-size: 1.8rem;
-    color: white;
+    color: rgb(70, 70, 70);
     margin: 0;
 }
 
 .visual-content p {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(161, 161, 161, 0.9);
     margin: 0;
 }
 
