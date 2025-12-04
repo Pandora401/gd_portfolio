@@ -11,7 +11,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/gd_portfolio">
       <div className="app">
         <ScrollToTop />
         <Navbar />
