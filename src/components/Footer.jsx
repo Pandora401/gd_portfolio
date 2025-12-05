@@ -13,7 +13,7 @@ const Footer = () => {
                     {/* Brand Section */}
                     <div className="footer-section">
                         <h3 className="footer-logo">
-                            <span className="gradient-text">Bridey </span>Mason
+                            Bridey Mason
                         </h3>
                         <p className="footer-tagline">
                             Crafting exceptional digital experiences through innovative design solutions.

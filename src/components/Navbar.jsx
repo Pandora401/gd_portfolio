@@ -35,12 +35,14 @@ const Navbar = () => {
         transition={{ duration: 0.5 }}
       >
         <div className="container navbar-content">
-          <Link to="/" className="logo">
-            <span className="gradient-text">Bridey </span>Mason
+          {/* className logo only on home else show logo-dark */}
+          <Link to="/" className={location.pathname === '/' ? 'logo' : 'logo-dark'}>
+            Bridey Mason
           </Link>
 
           {/* Desktop Menu */}
-          <ul className="nav-links desktop-menu">
+          {/* if route is home show only nav-links else show nav-links-pages */}
+          <ul className={location.pathname === '/' ? 'nav-links' : 'nav-links-pages'}>
             {navLinks.map((link) => (
               <li key={link.path}>
                 <Link

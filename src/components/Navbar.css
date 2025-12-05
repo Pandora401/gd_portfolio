@@ -33,6 +33,16 @@
     transition: transform var(--transition-base), color var(--transition-base);
 }
 
+.logo-dark {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--font-display);
+    color: #2f2f2f;
+    /* White/Cream for visibility on teal hero */
+    letter-spacing: 0.05em;
+    transition: transform var(--transition-base), color var(--transition-base);
+}
+
 .navbar.scrolled .logo {
     color: var(--color-primary);
     /* Dark when scrolled */
@@ -40,9 +50,9 @@
 
 .logo:hover {
     transform: scale(1.02);
-    opacity: 0.9;
 }
 
+.nav-links-pages,
 .nav-links {
     display: flex;
     list-style: none;
@@ -50,6 +60,7 @@
     align-items: center;
 }
 
+.nav-links-pages li,
 .nav-links li {
     position: relative;
 }
@@ -61,7 +72,19 @@
     position: relative;
     padding: var(--space-xs) 0;
     transition: color var(--transition-base);
-    color: #F9FFF2;
+    color: #fff7f2;
+    /* White/Cream for visibility on teal hero */
+    letter-spacing: 0.05em;
+}
+
+.nav-links-pages a {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 1rem;
+    position: relative;
+    padding: var(--space-xs) 0;
+    transition: color var(--transition-base);
+    color: #252424;
     /* White/Cream for visibility on teal hero */
     letter-spacing: 0.05em;
 }

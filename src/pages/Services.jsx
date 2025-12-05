@@ -96,7 +96,7 @@ const Services = () => {
     const pricingPlans = [
         {
             name: 'Standard',
-            price: '$45',
+            price: '$50',
             period: 'per hour',
             description: 'Perfect for small projects and quick deliverables',
             features: [
@@ -110,7 +110,7 @@ const Services = () => {
         },
         {
             name: 'Enterprise',
-            price: '$60',
+            price: '$75',
             period: 'per hour',
             description: 'Ideal for comprehensive design projects',
             features: [
@@ -123,24 +123,24 @@ const Services = () => {
                 'Social Media Kit'
             ],
             popular: true
-        },
-        {
-            name: 'Premium',
-            price: '$70',
-            period: 'per hour',
-            description: 'For large-scale projects and ongoing partnerships',
-            features: [
-                'Unlimited Concepts',
-                'Unlimited Revisions',
-                'Custom Timeline',
-                'All Source Files',
-                'Dedicated Support',
-                'Complete Brand Package',
-                'Monthly Retainer Option',
-                'Design System'
-            ],
-            popular: false
         }
+        // {
+        //     name: 'Premium',
+        //     price: '$70',
+        //     period: 'per hour',
+        //     description: 'For large-scale projects and ongoing partnerships',
+        //     features: [
+        //         'Unlimited Concepts',
+        //         'Unlimited Revisions',
+        //         'Custom Timeline',
+        //         'All Source Files',
+        //         'Dedicated Support',
+        //         'Complete Brand Package',
+        //         'Monthly Retainer Option',
+        //         'Design System'
+        //     ],
+        //     popular: false
+        // }
     ];
 
     return (
@@ -216,14 +216,14 @@ const Services = () => {
                         {pricingPlans.map((plan, index) => (
                             <motion.div
                                 key={index}
-                                className={`pricing-card ${plan.popular ? 'popular' : ''}`}
+                                className={`pricing-card plan.popular`}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 whileHover={{ y: -8 }}
                             >
-                                {plan.popular && <div className="popular-badge">Most Popular</div>}
+                                {/* {plan.popular && <div className="popular-badge">Most Popular</div>} */}
 
                                 <h3>{plan.name}</h3>
                                 <div className="price">

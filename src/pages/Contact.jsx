@@ -52,7 +52,8 @@ const Contact = () => {
     const projectTypes = [
         'Product Design',
         'Logo Design',
-        'Social Media Design',
+        'Illustrations',
+        'Social Media Campaigns',
         'Presentation Design',
         'Label Design',
         'Other'
@@ -74,6 +75,13 @@ const Contact = () => {
         '1-2 months',
         '2-3 months',
         'Flexible'
+    ];
+
+    const projectMaturities = [
+        'Concept',
+        'Design',
+        'Development',
+        'Launch'
     ];
 
     return (
@@ -263,23 +271,38 @@ const Contact = () => {
                                             </select>
                                         </div>
                                     </div>
-
-                                    <div className="form-group">
-                                        <label htmlFor="timeline">Project Timeline *</label>
-                                        <select
-                                            id="timeline"
-                                            name="timeline"
-                                            value={formData.timeline}
-                                            onChange={handleChange}
-                                            required
-                                        >
-                                            <option value="">Select timeline</option>
-                                            {timelines.map((time) => (
-                                                <option key={time} value={time}>{time}</option>
-                                            ))}
-                                        </select>
+                                    <div className="form-row">
+                                        <div className="form-group">
+                                            <label htmlFor="timeline">Project Timeline *</label>
+                                            <select
+                                                id="timeline"
+                                                name="timeline"
+                                                value={formData.timeline}
+                                                onChange={handleChange}
+                                                required
+                                            >
+                                                <option value="">Select timeline</option>
+                                                {timelines.map((time) => (
+                                                    <option key={time} value={time}>{time}</option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor="timeline">Project Maturity *</label>
+                                            <select
+                                                id="timeline"
+                                                name="timeline"
+                                                value={formData.timeline}
+                                                onChange={handleChange}
+                                                required
+                                            >
+                                                <option value="">Where is your project at?</option>
+                                                {projectMaturities.map((maturity) => (
+                                                    <option key={maturity} value={maturity}>{maturity}</option>
+                                                ))}
+                                            </select>
+                                        </div>
                                     </div>
-
                                     <div className="form-group">
                                         <label htmlFor="description">Project Description *</label>
                                         <textarea
