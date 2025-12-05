@@ -62,20 +62,6 @@ const Home = () => {
             <section className="hero">
                 <div className="hero-background-texture"></div>
 
-                <motion.div
-                    className="vine-decoration top-left"
-                    style={{ y: yVine }}
-                >
-                    <img src={vineCorner} alt="Decorative Vine" />
-                </motion.div>
-
-                <motion.div
-                    className="vine-decoration bottom-right"
-                    style={{ y: yVine }}
-                >
-                    <img src={vineCorner} alt="Decorative Vine" />
-                </motion.div>
-
                 <motion.div className="hero-content" style={{ y: yText }}>
                     <motion.div
                         className="hero-badge"

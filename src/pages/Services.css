@@ -7,7 +7,7 @@
 .services-hero {
     padding: var(--space-3xl) 0;
     text-align: center;
-    background-image: url('../assets/images/paper-texture.png');
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 50%, #f5f5f5 100%);
     background-size: cover;
     position: relative;
     border-bottom: 1px solid var(--color-border);
@@ -256,7 +256,7 @@
 
 /* Services CTA */
 .services-cta-section {
-    background-image: url('../assets/images/paper-texture.png');
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 50%, #f5f5f5 100%);
     background-size: cover;
     padding: var(--space-3xl) 0;
     text-align: center;
