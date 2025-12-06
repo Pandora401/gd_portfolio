@@ -23,9 +23,9 @@
     inset: 0;
     z-index: 0;
     background:
-        radial-gradient(circle at 20% 30%, #46606060 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, #46606050 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, #46606030 0%, transparent 60%);
+        radial-gradient(circle at 20% 30%, #2c3d3d60 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, #2c3d3d50 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, #2c3d3d30 0%, transparent 60%);
     background-size: 200% 200%;
     animation: cloudyAura 20s ease-in-out infinite;
 }
