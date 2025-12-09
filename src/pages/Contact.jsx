@@ -1,59 +1,31 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { HiMail, HiLocationMarker } from 'react-icons/hi';
 import { FaDribbble, FaBehance, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
-    const formCreated = useRef(false);
-
     useEffect(() => {
-        // Prevent duplicate form creation
-        if (formCreated.current) return;
-
-        // Check if script already exists
-        const existingScript = document.querySelector('script[src*="hsforms.net"]');
-
-        if (existingScript) {
-            // Script already loaded, just create the form
+        // Wait for HubSpot script to load (loaded globally in index.html)
+        const initForm = () => {
             if (window.hbspt) {
                 window.hbspt.forms.create({
                     region: "ap1",
                     portalId: "442502758",
                     formId: "36dfe11b-c65f-4ec7-b7de-7ed02f2b9cac",
-                    target: '.hs-form-frame'
+                    target: '#hubspot-form-container'
                 });
-                formCreated.current = true;
             }
-            return;
+        };
+
+        // If script already loaded, init immediately
+        if (window.hbspt) {
+            initForm();
+        } else {
+            // Otherwise wait for it to load
+            window.addEventListener('load', initForm);
+            return () => window.removeEventListener('load', initForm);
         }
-
-        // Load HubSpot form script
-        const script = document.createElement('script');
-        script.src = 'https://js-ap1.hsforms.net/forms/embed/v2.js';
-        script.async = true;
-        script.defer = true;
-        document.body.appendChild(script);
-
-        script.onload = () => {
-            // Initialize HubSpot form after script loads
-            if (window.hbspt && !formCreated.current) {
-                window.hbspt.forms.create({
-                    region: "ap1",
-                    portalId: "442502758",
-                    formId: "36dfe11b-c65f-4ec7-b7de-7ed02f2b9cac",
-                    target: '.hs-form-frame'
-                });
-                formCreated.current = true;
-            }
-        };
-
-        return () => {
-            // Cleanup: remove script only if component unmounts
-            if (document.body.contains(script)) {
-                document.body.removeChild(script);
-            }
-        };
     }, []);
 
     return (
@@ -146,7 +118,7 @@ const Contact = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 0.3 }}
                         >
-                            <div className="hs-form-frame"></div>
+                            <div id="hubspot-form-container"></div>
                         </motion.div>
                     </div>
                 </div>
