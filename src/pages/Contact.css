@@ -279,6 +279,109 @@
     font-size: 1.1rem;
 }
 
+/* Error Message */
+.error-message {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.error-message p {
+    color: rgb(239, 68, 68);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Button States */
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* HubSpot Form Styling */
+.hs-form-frame {
+    min-height: 400px;
+}
+
+/* Style HubSpot form to match our design */
+.contact-form-wrapper .hs-form {
+    font-family: var(--font-body);
+}
+
+.contact-form-wrapper .hs-form-field {
+    margin-bottom: var(--space-lg);
+}
+
+.contact-form-wrapper .hs-form-field label {
+    font-weight: 600;
+    color: var(--color-text);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-xs);
+    display: block;
+}
+
+.contact-form-wrapper .hs-input,
+.contact-form-wrapper input[type="text"],
+.contact-form-wrapper input[type="email"],
+.contact-form-wrapper input[type="tel"],
+.contact-form-wrapper select,
+.contact-form-wrapper textarea {
+    width: 100%;
+    padding: var(--space-md);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: all var(--transition-base);
+}
+
+.contact-form-wrapper .hs-input:focus,
+.contact-form-wrapper input:focus,
+.contact-form-wrapper select:focus,
+.contact-form-wrapper textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(90, 255, 145, 0.1);
+}
+
+.contact-form-wrapper .hs-button,
+.contact-form-wrapper input[type="submit"] {
+    width: 100%;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.contact-form-wrapper .hs-button:hover,
+.contact-form-wrapper input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-form-wrapper .hs-error-msgs {
+    color: rgb(239, 68, 68);
+    font-size: 0.875rem;
+    margin-top: var(--space-xs);
+}
+
+.contact-form-wrapper .submitted-message {
+    text-align: center;
+    padding: var(--space-3xl);
+    color: var(--color-text);
+}
+
+
 /* Responsive */
 @media (max-width: 968px) {
     .contact-grid {
